@@ -1,4 +1,5 @@
 import logging
+import os.path
 import re
 from datetime import datetime
 
@@ -10,6 +11,18 @@ except ImportError:
 import selenium.webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from PIL import Image, ImageOps, ImageDraw, ImageFont
+
+# Font a font to use for text captions added to images.
+FONT_PATHS = [
+  "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+  "/Library/Fonts/Arial.ttf",
+]
+for fontpath in FONT_PATHS:
+  if os.path.exists(fontpath):
+    FONT = ImageFont.truetype(fontpath, 20)
+    break
+else:
+  raise ValueError("Could not find a font.")
 
 # This Javascript script is injected into every page.
 mouse_cursor_script = """
@@ -194,19 +207,15 @@ class WebsiteScreenshotArchiver(object):
       raise ValueError("Border option is not valid.")
     border_width = int(m.group(1))
     border_color = m.group(2)
+
     # Prepare credit text and time stamp
     text = "Captured by Screenshot-Archiver {}".format(datetime.today().strftime('%Y-%m-%d'))
-    try:
-      font = ImageFont.truetype("arial.ttf", 20)
-    except:
-      # Maybe you are on a MacOS?
-      font = ImageFont.truetype("/Library/Fonts/Arial.ttf", 30)
     im = Image.open(fn)
     # Add credit and timestamp
     draw = ImageDraw.Draw(im)
     # Draw border
-    draw.text((im.size[0]/2-60, im.size[1]-60), text, font=font, fill="Black")
-    draw.text((im.size[0]/2-60-1, im.size[1]-60-1), text, font=font, fill="Gold")
+    draw.text((im.size[0]/2-60, im.size[1]-60), text, font=FONT, fill="Black")
+    draw.text((im.size[0]/2-60-1, im.size[1]-60-1), text, font=FONT, fill="Gold")
     ImageOps\
         .expand(im, border=border_width, fill=border_color)\
         .save(fn)
