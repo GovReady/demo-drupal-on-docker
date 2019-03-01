@@ -48,7 +48,7 @@ satisfies:
       granted to the AWS Cloud dated 1 May 2013 for the following:  information system
       monitoring.
 
-      CivicActions leverages the AWS platform and a host-based intrusion detection
+      ((Entity Maintaining Drupal)) leverages the AWS platform and a host-based intrusion detection
       system (HIDS) for monitoring strategically within the information system to
       collect organization-determined essential information and at ad hoc locations
       within the system; see inheritance below.

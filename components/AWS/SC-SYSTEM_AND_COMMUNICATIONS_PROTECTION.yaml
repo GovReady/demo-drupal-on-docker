@@ -44,7 +44,7 @@ satisfies:
     implementation_status: In Place
   - key: c
     text: >
-      Internal organizational networks (e.g. CivicActions private networks) are physically
+      Internal organizational networks (e.g. ((Entity Maintaining Drupal)) private networks) are physically
       separate from the AWS platform and are protected by managed boundary devices
       that include FIPS 140-2 validated encryption modules at all entry points.
 

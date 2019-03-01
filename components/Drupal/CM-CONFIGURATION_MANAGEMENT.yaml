@@ -20,8 +20,9 @@ satisfies:
       is managed in git, a source code version control system. Once the source code
       is updated, git maintains the new version of staged code once committed in the
       git repository as the new baseline. All code prior to it being staged is documented,
-      tested and approved by ((Entity Maintaining Drupal)) Development, which is described in control
-      SA-3. The production environment is configured to take database snapshots daily.
+      tested and approved by ((Entity Maintaining Drupal)) Development, which is described
+      in control SA-3. The production environment is configured to take database snapshots
+      daily.
     implementation_status: In Place
 - control_key: CM-2 (1)
   control_name: REVIEWS AND UPDATES
@@ -30,14 +31,15 @@ satisfies:
   security_control_type: Hybrid
   narrative:
   - text: >
-      ((Entity Maintaining Drupal)) reviews and updates baseline configurations for the system at least
-      annually, when requested by the System Owner or required by law, and as an integral
-      part of information system component installations, upgrades and maintenance.
+      ((Entity Maintaining Drupal)) reviews and updates baseline configurations for
+      the system at least annually, when requested by the System Owner or required
+      by law, and as an integral part of information system component installations,
+      upgrades and maintenance.
 
-      Review of the CM baselines for the system is conducted and approved by ((Entity Maintaining Drupal))
-      Development. Any changes made to the production environment are approved prior
-      to deployment by the CCB or agile scrum process. Changes that may require updates
-      to the baseline configuration for the application include:
+      Review of the CM baselines for the system is conducted and approved by ((Entity
+      Maintaining Drupal)) Development. Any changes made to the production environment
+      are approved prior to deployment by the CCB or agile scrum process. Changes
+      that may require updates to the baseline configuration for the application include:
 
       • Significant upgrades or changes to applications or database software
 
@@ -108,8 +110,8 @@ satisfies:
   - key: a
     text: >
       Configuration changes that do not entail software code changes can only be performed
-      by ((Entity Maintaining Drupal)) internal administrators with privileges implemented by access
-      enforcement (AC-3) and least privilege (AC-6).
+      by ((Entity Maintaining Drupal)) internal administrators with privileges implemented
+      by access enforcement (AC-3) and least privilege (AC-6).
     implementation_status: In Place
 - control_key: CM-6
   control_name: CONFIGURATION SETTINGS
@@ -118,9 +120,9 @@ satisfies:
   security_control_type: Hybrid
   narrative:
   - text: >
-      ((Entity Maintaining Drupal)) configuration settings for Drupal are guided by the Drupal Security
-      Coding Standards <https://www.drupal.org/docs/develop/security> for the security
-      configuration management processes and tools.
+      ((Entity Maintaining Drupal)) configuration settings for Drupal are guided by
+      the Drupal Security Coding Standards <https://www.drupal.org/docs/develop/security>
+      for the security configuration management processes and tools.
     implementation_status: In Place
 - control_key: CM-8
   control_name: INFORMATION SYSTEM COMPONENT INVENTORY
@@ -130,8 +132,8 @@ satisfies:
   narrative:
   - text: >
       The software inventory for the application is maintained in the codebase stored
-      ((Entity Maintaining Drupal))' git source code version control system. It consists of the following
-      components:
+      ((Entity Maintaining Drupal))' git source code version control system. It consists
+      of the following components:
 
       • The Drupal open source web content management system
 
@@ -140,14 +142,14 @@ satisfies:
 
       • Custom code written by ((Entity Maintaining Drupal))' developers
 
-      The inventory is reviewed monthly by ((Entity Maintaining Drupal)) Product Engineering teams
-      in accordance with the Configuration Management Plan.
+      The inventory is reviewed monthly by ((Entity Maintaining Drupal)) Product Engineering
+      teams in accordance with the Configuration Management Plan.
 
-      Website content is backed up daily using CPM snapshots. This allows ((Entity Maintaining Drupal))
-      to build an inventory of the system on demand.
+      Website content is backed up daily using CPM snapshots. This allows ((Entity
+      Maintaining Drupal)) to build an inventory of the system on demand.
     implementation_status: In Place
-  summary: The application's software inventory is maintained in the ((Entity Maintaining Drupal))'
-    git source code repository.
+  summary: The application's software inventory is maintained in the ((Entity Maintaining
+    Drupal))' git source code repository.
 - control_key: CM-10
   control_name: SOFTWARE USAGE RESTRICTIONS
   standard_key: NIST SP 800-53 Revision 4

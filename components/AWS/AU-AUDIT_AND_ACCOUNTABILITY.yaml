@@ -49,7 +49,7 @@ satisfies:
       granted to the AWS Cloud dated 1 May 2013: response to audit processing failures.
 
       In the event of low storage or other system issues affecting audit, the AWS
-      CloudWatch monitoring system will alert CivicActions Operations via real-time
+      CloudWatch monitoring system will alert ((Entity Maintaining Drupal)) Operations via real-time
       alert mechanism such as OpsGenie.
     implementation_status: In Place
 - control_key: AU-6
