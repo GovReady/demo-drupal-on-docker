@@ -12,9 +12,17 @@ class DemoDrupal(WebsiteScreenshotArchiver):
     self.navigateTo("https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#SecurityGroups:groupId=sg-0897ed9775ba2a5bf;sort=groupId")
     time.sleep(4)
     self.screenshot("aws-security-group-description")
-    self.click_element('By.linkText("view inbound rules")')
-    time.sleep(4)
+
+    self.click_element('.GFRVLNABDNB div:nth-child(3) .gwt-Image') # maximize the panel
+    time.sleep(1)
+
+    self.click_element('.gwt-TabLayoutPanelTab:nth-child(2)') # Inbound
+    time.sleep(1)
     self.screenshot("aws-security-group-inbound")
+
+    self.click_element('.gwt-TabLayoutPanelTab:nth-child(3)') # Outbound
+    time.sleep(1)
+    self.screenshot("aws-security-group-outbound")
     
     # self.fill_field("#search_form_input_homepage", "GovReady")
     # self.click_with_screenshot("#search_button_homepage", "search1")
